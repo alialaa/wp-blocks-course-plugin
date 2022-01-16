@@ -104,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 
 
-alert((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Loaded!"));
+alert((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Loaded!'));
 }();
 /******/ })()
 ;
