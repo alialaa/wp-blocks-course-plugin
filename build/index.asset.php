@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('wp-i18n'), 'version' => '7d635e0cfa4096d0b14df2dad1a63bd5');
+<?php return array('dependencies' => array('wp-data'), 'version' => '008fe338ddbf1175f07abf7c511d5c68');

@@ -6,23 +6,23 @@
   "scripts": {
     "build": "wp-scripts build",
     "start": "wp-scripts start",
-     "format": "wp-scripts format  && stylelint \"**/*.scss\" --fix",
-     "lint:css": "wp-scripts lint-style",
-     "lint:js": "wp-scripts lint-js",
-     "packages-update": "wp-scripts packages-update",
-     "prepare": "husky install"
+    "format": "wp-scripts format  && stylelint \"**/*.scss\" --fix",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "prepare": "husky install"
   },
   "prettier": "@wordpress/prettier-config",
-   "stylelint": {
-     "extends": "@wordpress/stylelint-config/scss"
-   },
-   "lint-staged": {
-     "*.js": [
-       "wp-scripts lint-js",
-       "wp-scripts format"
-     ],
-     "*.scss": "npx stylelint --fix"
-   },
+  "stylelint": {
+    "extends": "@wordpress/stylelint-config/scss"
+  },
+  "lint-staged": {
+    "*.js": [
+      "wp-scripts lint-js",
+      "wp-scripts format"
+    ],
+    "*.scss": "npx stylelint --fix"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -35,6 +35,7 @@
     "lint-staged": "^12.1.5"
   },
   "dependencies": {
+    "@wordpress/data": "^6.1.5",
     "@wordpress/i18n": "^4.2.4"
   }
 }
