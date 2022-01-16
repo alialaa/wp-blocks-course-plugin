@@ -49,7 +49,13 @@ const fetchTodos = () => {
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   FETCH_TODOS() {
-    return window.fetch('https://jsonplaceholder.typicode.com/todos?_limit=10').then(response => response.json());
+    return window.fetch('https://jsonplaceholder.typicode.com/todos?_limit=10').then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+
+      throw new Error('Could not fetch todos');
+    });
   }
 
 });
@@ -134,13 +140,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getTodos": function() { return /* binding */ getTodos; }
 /* harmony export */ });
-/* harmony import */ var _controls__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controls */ "./src/todos-store/controls.js");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "./src/todos-store/actions.js");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _controls__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controls */ "./src/todos-store/controls.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions */ "./src/todos-store/actions.js");
+
 
 
 function* getTodos() {
-  const todos = yield (0,_controls__WEBPACK_IMPORTED_MODULE_0__.fetchTodos)();
-  return (0,_actions__WEBPACK_IMPORTED_MODULE_1__.populateTodos)(todos);
+  try {
+    const todos = yield (0,_controls__WEBPACK_IMPORTED_MODULE_1__.fetchTodos)();
+    return (0,_actions__WEBPACK_IMPORTED_MODULE_2__.populateTodos)(todos);
+  } catch (error) {
+    return (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)('core/notices').createErrorNotice(error.message || 'Could not fetch todos.');
+  }
 }
 
 /***/ }),
