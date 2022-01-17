@@ -1,1 +1,0 @@
-{"version":3,"file":"index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://wp-blocks-course-plugin-boilerplate/./src/editor.scss"],"sourcesContent":[".editor-styles-wrapper {\n\tbackground-color: #777 !important;\n}\n"],"names":[],"sourceRoot":""}
