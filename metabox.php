@@ -1,4 +1,18 @@
 <?php
+
+function blocks_course_register_meta() {
+    register_meta( 'post', '_blocks_course_post_subtitle', array(
+        'single' => true,
+        'type' => 'string',
+        'show_in_rest' => true,
+        'sanitize_callback' => 'sanitize_text_field',
+        'auth_callback' => function() {
+            return current_user_can( 'edit_posts' );
+        }
+    ));
+}
+add_action( 'init', 'blocks_course_register_meta' );
+
 function blocks_course_add_meta_box() {
     add_meta_box( 
         'blocks_course_post_options_metabox', 
