@@ -14,6 +14,7 @@
 
 include_once('metabox.php');
 include_once('templates.php');
+include_once('patterns.php');
 
 function blocks_course_plugin_enqueue_assets() {
 

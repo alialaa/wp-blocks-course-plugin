@@ -38,4 +38,4 @@ function blocks_course_plugin_register_template() {
         )
     );
 }
-add_action( 'init', 'blocks_course_plugin_register_template' );
+// add_action( 'init', 'blocks_course_plugin_register_template' );
