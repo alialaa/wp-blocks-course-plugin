@@ -36,9 +36,12 @@
   },
   "dependencies": {
     "@wordpress/block-editor": "^8.1.0",
+    "@wordpress/blocks": "^11.2.0",
     "@wordpress/components": "^19.2.0",
     "@wordpress/data": "^6.1.5",
+    "@wordpress/dom-ready": "^3.3.0",
     "@wordpress/edit-post": "^5.0.20",
+    "@wordpress/hooks": "^3.3.0",
     "@wordpress/i18n": "^4.2.4",
     "@wordpress/plugins": "^4.0.7",
     "@wordpress/rich-text": "^5.1.0"
