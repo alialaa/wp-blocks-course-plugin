@@ -12,9 +12,10 @@
  *
  */
 
-include_once('metabox.php');
-include_once('templates.php');
-include_once('patterns.php');
+include_once('php/metabox.php');
+include_once('php/templates.php');
+include_once('php/patterns.php');
+include_once('php/filters.php');
 
 function blocks_course_plugin_enqueue_assets() {
 
